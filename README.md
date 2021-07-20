@@ -7,7 +7,7 @@
 Ensure you have docker installed.
 
 ```
-docker run -p 8888:8888 -it ghcr.io/codewithsk/quantum-computing-with-julia:latest
+docker run -p 8888:8888 -it ghcr.io/codewithsk/juliacon2021:latest
 ```
 
 This should start a local jupyter notebook instance with the notebooks required for this tutorial.

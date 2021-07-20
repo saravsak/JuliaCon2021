@@ -2,7 +2,19 @@
 
 ## Setup Instructions
 
-### Install Julia
+### Docker Instructions
+
+Ensure you have docker installed.
+
+```
+docker run -p 8888:8888 -it ghcr.io/codewithsk/quantum-computing-with-julia:latest
+```
+
+This should start a local jupyter notebook instance with the notebooks required for this tutorial.
+
+### Setting it up from scratch
+
+#### Install Julia
 
 1. Download Julia v1.6.1 for your environment [here](https://julialang.org/downloads/)
 
@@ -29,7 +41,7 @@ julia version 1.6.1
 $ julia -e 'using Pkg; Pkg.add("IJulia")'
 ```
 
-### Setup Jupyter
+#### Setup Jupyter
 
 1. Install Anaconda from [here](https://www.anaconda.com/products/individual)
 ```bash
@@ -51,7 +63,7 @@ Available kernels:
   python3      /home/ubuntu/anaconda3/share/jupyter/kernels/python3
 ```
 
-### Setup PyCall
+#### Setup PyCall
 
 1. Install Conda.jl
 ```bash
@@ -60,7 +72,7 @@ $ julia -e 'using Pkg; Pkg.add("Conda")'
 
 2. Install PyCall
 ```bash
-$ julia -e 'using Pkg; ENV["PYTHON"]=""; Pkg.build("PyCall")'
+$ julia -e 'using Pkg; Pkg.add("PyCall"); ENV["PYTHON"]=""; Pkg.build("PyCall")'
 ```
 
 3. Install AWS Braket
